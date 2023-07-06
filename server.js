@@ -7,7 +7,7 @@ let app = express();
 let server = http.createServer(app);
 
 app.use(express.static('./client'));
-//io = io.listen(server);
+io = socketio(server);
 
 server.listen(process.env.PORT || 8888);
 console.log('Server running...');
